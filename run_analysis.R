@@ -1,6 +1,6 @@
 library(tidyverse)
 
-# paths to folders ----------
+# path to folders
 
 path_to_data <- "getdata_projectfiles_UCI HAR Dataset/UCI HAR Dataset"
 
@@ -61,6 +61,9 @@ tidy_dataset <- data %>%
   spread(measurement, mean_value) 
  
   
+# write tidy dataset 
+
+write.table(tidy_dataset, "tidy_dataset.txt")
 
 
 
